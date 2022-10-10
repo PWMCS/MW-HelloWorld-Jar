@@ -39,10 +39,10 @@
     </dependencies>
 
     <build>
-        <finalName>maven-generate-jar</finalName>
+        <finalName>MW-HelloWorld-Jar</finalName>
         <plugins>
             <plugin>
-                <artifactId>MW-HelloWorld-Jar</artifactId>
+                <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
                     <!-- 
