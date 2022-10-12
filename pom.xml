@@ -51,62 +51,23 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                 <version>${maven-jar-plugin.version}</version>             
                   <configuration>
                       <archive>
                          <manifest>
-                          <mainClass>com.pw.Application</mainClass>
-                          </manifest>
+                            <mainClass>com.pw.Application</mainClass>
+                         </manifest>
                        </archive>
                    </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>${maven.compiler.source.version}</source>
-                    <target>${maven.compiler.target.version}</target>
-                </configuration>
-            </plugin>
             
-            <!-- https://github.com/Nilhcem/FakeSMTP/issues/72 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    
-                    <!--
-                    <archive>
-                        <manifestFile>${project.basedir}/META-INF/MANIFEST.MF</manifestFile>
-                    </archive>
-                    -->
-                    
-                    <!-- Remove the "-jar-with-dependencies" at the end of the file -->
-                    <appendAssemblyId>false</appendAssemblyId>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <phase>package</phase>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
     <properties>
-        <java.version>8</java.version>
+        <!-- <java.version>11</java.version>-->
         <log4j2.version>2.17.1</log4j2.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-        <maven.compiler.source.version>8</maven.compiler.source.version>
-        <maven.compiler.target.version>8</maven.compiler.target.version>
+        <!-- <maven.compiler.release>11</maven.compiler.release> -->
     </properties>
 
 </project>
