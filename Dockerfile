@@ -1,4 +1,5 @@
-FROM openjdk:11
+FROM openjdk:8
+
 WORKDIR /build
 COPY pom.xml .
 COPY src src
