@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM quay.io/devfile/maven:3.8.1-openjdk-17-slim
 
 WORKDIR /build
 COPY pom.xml .
@@ -11,4 +11,4 @@ EXPOSE 8080
 
 CMD ["catalina.sh", "run"]
 
-ENTRYPOINT ["java","-jar","webapps/MW-HelloWorld-Jar.jar"]
+# ENTRYPOINT ["java","-jar","webapps/MW-HelloWorld-Jar.jar"]
